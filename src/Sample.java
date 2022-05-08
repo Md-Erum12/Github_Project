@@ -36,6 +36,14 @@ class Rectangle implements Shape
     }
 }
 
+class Triangle implements Triangle
+{
+    @Override
+    public void draw()
+    {
+        System.out.println("a Triangle drawn");
+    }
+}
 
 class Sample {
 
@@ -71,6 +79,12 @@ class Sample {
              {
                  Rectangle r = new Rectangle();
                  r.draw();
+             }
+             
+             else if (a=="Triangle")
+             {
+                 Triangle tr = new Triangle();
+                 tr.draw();
              }
 
              else{
