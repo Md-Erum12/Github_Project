@@ -36,17 +36,36 @@ class Rectangular implements Shape
     }
 }
 
-class Triangle implements Triangle
+
+class ShapeFactory
 {
-    @Override
-    public void draw()
+
+    public Shape getShape(String type) throws Exception
     {
-        System.out.println("a Triangle drawn");
+        switch (type)
+        {
+            case "Circle":
+                return new Circle();
+            case "Square":
+                return new Square();
+            case "Rectangle":
+                return new Rectangle();
+            default:
+                throw new Exception( "Shape type : "+type+" cannot be instantiated");
+        }
     }
 }
 
-class Sample {
+class Painter
+{
+    public static void main(String[] args) throws Exception
+    {
 
+        ShapeFactory shapeFactory = new ShapeFactory();
+        Shape circle=shapeFactory.getShape("Circle");
+        circle.draw();
+        Shape square = shapeFactory.getShape("Square");
+        square.draw();
 
      public static  void main(String[] args) {
 
@@ -94,3 +113,8 @@ class Sample {
 
          }
      }
+
+        Shape rectangle = shapeFactory.getShape("Rectangle");
+        rectangle.draw();
+    }
+}
