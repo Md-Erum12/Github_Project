@@ -27,7 +27,7 @@ class Square implements Shape
     }
 }
 
-class Rectangle implements Shape
+class Rectangular implements Shape
 {
     @Override
     public void draw()
@@ -77,8 +77,8 @@ class Sample {
 
              else if (a=="Rectangle")
              {
-                 Rectangle r = new Rectangle();
-                 r.draw();
+                 Rectangular rect = new Rectangular();
+                 rect.draw();
              }
              
              else if (a=="Triangle")
@@ -88,7 +88,7 @@ class Sample {
              }
 
              else{
-                 System.out.println("Sorry!");
+                 System.out.println("Sorry!Your entered choice isn't available here");
              }
 
 
