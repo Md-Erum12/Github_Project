@@ -13,7 +13,7 @@ class Circle implements Shape
     @Override
     public void draw()
     {
-        System.out.println("a circle drawn");
+       // System.out.println("a circle drawn");
     }
 }
 
@@ -23,7 +23,7 @@ class Square implements Shape
     @Override
     public void draw()
     {
-        System.out.println("a square drawn");
+       // System.out.println("a square drawn");
     }
 }
 
@@ -32,7 +32,8 @@ class Rectangular implements Shape
     @Override
     public void draw()
     {
-        System.out.println("a rectangle drawn");
+
+        //System.out.println("a rectangle drawn");
     }
 }
 
@@ -67,8 +68,7 @@ class Painter
         Shape square = shapeFactory.getShape("Square");
         square.draw();
 
-     public static  void main(String[] args) {
-
+     public static  void main (String[] args) {
 
              Scanner sc= new Scanner(System.in);
           //  Stirng a = sc.nextString();
@@ -117,4 +117,4 @@ class Painter
         Shape rectangle = shapeFactory.getShape("Rectangle");
         rectangle.draw();
     }
-}
+
